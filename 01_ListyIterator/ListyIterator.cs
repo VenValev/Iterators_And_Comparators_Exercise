@@ -27,6 +27,13 @@ namespace _01_ListyIterator
 
             return canMove;
         }
+        public void Print()
+        {
+            if(list.Count == 0)
+            {
+                throw new ArgumentException("Invalid Operation!");
+            }
+        }
         
     }
 }
