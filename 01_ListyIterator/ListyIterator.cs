@@ -13,5 +13,20 @@ namespace _01_ListyIterator
             list = new List<T>();
             currIndex = 0;
         }
+
+        public bool HasNext() => currIndex < list.Count - 1;
+
+        public bool Move()
+        {
+            bool canMove = HasNext();
+
+            if (canMove)
+            {
+                currIndex++;
+            }
+
+            return canMove;
+        }
+        
     }
 }
