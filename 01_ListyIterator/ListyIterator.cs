@@ -33,6 +33,8 @@ namespace _01_ListyIterator
             {
                 throw new ArgumentException("Invalid Operation!");
             }
+
+            Console.WriteLine($"{list[currIndex]}");
         }
         
     }
