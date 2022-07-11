@@ -10,7 +10,7 @@ namespace _01_ListyIterator
         private int currIndex;
         public ListyIterator(params T[] data)
         {
-            list = new List<T>();
+            list = new List<T>(data);
             currIndex = 0;
         }
 
