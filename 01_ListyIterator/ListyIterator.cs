@@ -11,6 +11,7 @@ namespace _01_ListyIterator
         public ListyIterator(params T[] data)
         {
             list = new List<T>();
+            currIndex = 0;
         }
     }
 }
