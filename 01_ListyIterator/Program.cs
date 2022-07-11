@@ -17,7 +17,18 @@ namespace _01_ListyIterator
                 if (cmndArg[0] == "Create")
                 {
                     listy = new ListyIterator<string>(cmndArg.Skip(1).ToArray());
-
+                }
+                else if (cmndArg[0] == "Move")
+                {
+                    Console.WriteLine(listy.Move());
+                }
+                else if (cmndArg[0] == "Print")
+                {
+                    listy.Print();
+                }
+                else if (cmndArg[0] == "HasNext")
+                {
+                    Console.WriteLine(listy.HasNext());
                 }
             }
         }
