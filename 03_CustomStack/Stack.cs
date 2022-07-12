@@ -31,8 +31,8 @@ namespace _03_CustomStack
                 throw new ArgumentException("No elements");
             }
 
-            T element = list[list.Count-1];
-            list.RemoveAt(list.Count-1);
+            T element = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
             return element;
         }
         public IEnumerator<T> GetEnumerator()
@@ -43,9 +43,7 @@ namespace _03_CustomStack
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        
     }
 }

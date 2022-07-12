@@ -9,13 +9,14 @@ namespace _03_CustomStack
         {
             string command;
             var stack = new Stack<string>();
+
             while((command = Console.ReadLine()) != "END")
             {
-                string[] cmndArg = command.Split();
+                var cmndArg = command.Split();
 
                 if (cmndArg[0] == "Push")
                 {
-                    stack.Push(cmndArg.Skip(1).Select(e => e.Split(',')).First().ToArray());
+                    stack.Push(cmndArg.Skip(1).Select(e => e.Split(",").First()).ToArray());
                 }
                 else if (cmndArg[0] == "Pop")
                 {
