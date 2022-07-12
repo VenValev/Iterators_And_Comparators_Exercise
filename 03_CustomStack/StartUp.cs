@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _03_CustomStack
 {
@@ -14,7 +15,7 @@ namespace _03_CustomStack
 
                 if (cmndArg[0] == "Push")
                 {
-
+                    stack.Push(cmndArg.Skip(1).Select(e => e.Split(',')).First());
                 }
                 else if (cmndArg[0] == "Pop")
                 {
