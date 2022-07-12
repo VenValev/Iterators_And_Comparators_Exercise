@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace _01_ListyIterator
 {
-    public class ListyIterator<T>
+    public class ListyIterator<T> : IEnumerable<T>
     {
         private List<T> list;
         private int currIndex;
@@ -13,6 +14,8 @@ namespace _01_ListyIterator
             list = new List<T>(data);
             currIndex = 0;
         }
+
+        
 
         public bool HasNext() => currIndex < list.Count - 1;
 
@@ -36,6 +39,23 @@ namespace _01_ListyIterator
 
             Console.WriteLine($"{list[currIndex]}");
         }
-        
+
+        public void PrintAll()
+        {
+            Console.WriteLine(String.Join(" ", list));
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() // => throw new NotImplementedException();
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (T item in list)
+            {
+                yield return item;
+            }
+        }
     }
 }

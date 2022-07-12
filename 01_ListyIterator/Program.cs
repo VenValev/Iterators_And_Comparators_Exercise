@@ -30,6 +30,10 @@ namespace _01_ListyIterator
                 {
                     Console.WriteLine(listy.HasNext());
                 }
+                else if(cmndArg[0] == "PrintAll")
+                {
+                    listy.PrintAll();
+                }
             }
         }
     }
