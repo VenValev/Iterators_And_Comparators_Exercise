@@ -12,12 +12,13 @@ namespace _03_CustomStack
 
         public Stack(params T[] data)
         {
-            list = new List<T>();
+            list = new List<T>(data); //!!! Vse zabravq6 datata!!!
+
         }
 
         public void Push(params T[] elements)
         {
-            foreach(T element in elements)
+            foreach(var element in elements)
             {
                 list.Insert(list.Count, element);
             }
@@ -36,7 +37,7 @@ namespace _03_CustomStack
         }
         public IEnumerator<T> GetEnumerator()
         {
-            for(int i = list.Count-1; i>=0; i--)
+            for(int i = list.Count - 1; i >= 0; i--)
             {
                 yield return list[i];
             }
@@ -44,7 +45,7 @@ namespace _03_CustomStack
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
