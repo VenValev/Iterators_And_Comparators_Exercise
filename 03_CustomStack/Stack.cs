@@ -22,9 +22,24 @@ namespace _03_CustomStack
                 list.Insert(list.Count, element);
             }
         }
+
+        public T Pop()
+        {
+            if(list.Count == 0)
+            {
+                throw new ArgumentException("No elements");
+            }
+
+            T element = list[list.Count-1];
+            list.RemoveAt(list.Count-1);
+            return element;
+        }
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            for(int i = list.Count-1; i>=0; i--)
+            {
+                yield return list[i];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
