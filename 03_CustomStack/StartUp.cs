@@ -29,6 +29,15 @@ namespace _03_CustomStack
                     }
                 }
             }
+
+            foreach(var e in stack)
+            {
+                Console.WriteLine(e);
+            }
+            foreach (var e in stack)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }
