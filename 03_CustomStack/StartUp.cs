@@ -15,11 +15,18 @@ namespace _03_CustomStack
 
                 if (cmndArg[0] == "Push")
                 {
-                    stack.Push(cmndArg.Skip(1).Select(e => e.Split(',')).First());
+                    stack.Push(cmndArg.Skip(1).Select(e => e.Split(',')).First().ToArray());
                 }
                 else if (cmndArg[0] == "Pop")
                 {
-
+                    try
+                    {
+                        stack.Pop();
+                    }
+                    catch(ArgumentException ae)
+                    {
+                        Console.WriteLine(ae.Message);
+                    }
                 }
             }
         }
