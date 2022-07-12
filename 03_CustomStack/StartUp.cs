@@ -12,7 +12,7 @@ namespace _03_CustomStack
 
             while((command = Console.ReadLine()) != "END")
             {
-                var cmndArg = command.Split();
+                var cmndArg = command.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 if (cmndArg[0] == "Push")
                 {
