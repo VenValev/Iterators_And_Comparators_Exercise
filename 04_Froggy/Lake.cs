@@ -17,14 +17,14 @@ namespace _04_Froggy
         {
             for(int i = 0; i < lake.Length; i++)
             {
-                if(i % 2 == 1)
+                if(i % 2 == 0)
                 {
                     yield return lake[i];
                 }
             }
             for(int i = lake.Length - 1; i >=0; i--)
             {
-                if (i % 2 ==0)
+                if (i % 2 == 1)
                 {
                     yield return lake[i];
                 }
