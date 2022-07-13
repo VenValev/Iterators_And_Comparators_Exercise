@@ -28,7 +28,23 @@ namespace _05_Comparing_Objects
 
             foreach(Person person in persons)
             {
+                if (persons[index].CompareTo(person) == 0)
+                {
+                    equal++;
+                }
+                else
+                {
+                    notEqual++;
+                }
 
+                if(equal <= 1)
+                {
+                    Console.WriteLine("No matches");
+                }
+                else
+                {
+                    Console.WriteLine($"{equal} {notEqual} {persons.Count}");
+                }
             }
         }
     }
