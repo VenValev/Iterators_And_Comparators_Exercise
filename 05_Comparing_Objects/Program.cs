@@ -2,7 +2,7 @@
 
 namespace _05_Comparing_Objects
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
